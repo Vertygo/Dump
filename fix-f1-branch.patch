@@ -1,0 +1,39 @@
+diff --git a/rest/src/eco.rest.testutilities/TestEnvironment.cs b/rest/src/eco.rest.testutilities/TestEnvironment.cs
+index 62cff7b933..47f6b620c0 100644
+--- a/rest/src/eco.rest.testutilities/TestEnvironment.cs
++++ b/rest/src/eco.rest.testutilities/TestEnvironment.cs
+@@ -1,4 +1,5 @@
+ ∩╗┐using System.IO;
++using eco.rest.Infrastructure.Economic;
+ using Economic;
+ using Economic.Rest;
+ using Economic.Shared;
+diff --git a/code/r1/dotnet/src/EnvironmentPathRestApi.cs b/rest/src/eco.rest/Infrastructure/Economic/EnvironmentPathRestApi.cs
+similarity index 81%
+rename from code/r1/dotnet/src/EnvironmentPathRestApi.cs
+rename to rest/src/eco.rest/Infrastructure/Economic/EnvironmentPathRestApi.cs
+index 0307aa5c4c..79edcc9bfd 100644
+--- a/code/r1/dotnet/src/EnvironmentPathRestApi.cs
++++ b/rest/src/eco.rest/Infrastructure/Economic/EnvironmentPathRestApi.cs
+@@ -1,6 +1,7 @@
+-∩╗┐using Nancy;
++∩╗┐using Economic;
++using Nancy;
+ 
+-namespace Economic
++namespace eco.rest.Infrastructure.Economic
+ {
+ 	public class EnvironmentPathRestApi : EnvironmentPathBase
+ 	{
+diff --git a/rest/src/eco.rest/Infrastructure/Economic/ServiceFactory.cs b/rest/src/eco.rest/Infrastructure/Economic/ServiceFactory.cs
+index fa63fbf2d0..fced8d7b11 100644
+--- a/rest/src/eco.rest/Infrastructure/Economic/ServiceFactory.cs
++++ b/rest/src/eco.rest/Infrastructure/Economic/ServiceFactory.cs
+@@ -5,7 +5,6 @@
+ using Economic.Api.Base.Session;
+ using Economic.Rest;
+ using Economic.Rest.HttpContextWrapper;
+-using Economic.Shared;
+ using Nancy;
+ 
+ namespace eco.rest.Infrastructure.Economic
